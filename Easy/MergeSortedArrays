@@ -1,0 +1,22 @@
+Question: Write a function that, given two sorted arrays, returns one sorted array containing all elements from the
+two arrays
+
+Example Input: [3,7,9,11], [2,5,5,8,10]
+Example Output: [2,3,5,5,7,8,9,10,11]
+
+function sort(arr1,arr2){
+    var arr1pos = 0;
+    var arr2pos = 0;
+    var returnarr = [];
+
+    while(arr1[arr1pos] != undefined){
+        if(arr1[arr1pos] <= arr2[arr2pos]){
+            returnarr.push(arr1[arr1pos]);
+            arr1pos++;
+        } else {
+            returnarr.push(arr2[arr2pos]);
+            arr2pos++;
+        }
+    }
+
+}

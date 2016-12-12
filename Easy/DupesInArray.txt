@@ -1,0 +1,16 @@
+Question: Write a function that finds dupes in an Array
+
+JavaScript Solution O(n):
+
+function findDupes(arr){
+    var temp = {};
+    var dupes = []
+    arr.forEach(function(item,index){
+        if(item in temp){
+            dupes.push(item);
+        } else {
+            temp[item] = item;
+        }
+    })
+    return dupes;
+}
